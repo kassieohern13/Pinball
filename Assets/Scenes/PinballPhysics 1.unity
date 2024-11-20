@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 36ff0759eeeb4034f9b7f88435f32b12, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.2817239, g: 0.25494626, b: 0.2662055, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -269,7 +269,7 @@ Transform:
   m_GameObject: {fileID: 126436083}
   serializedVersion: 2
   m_LocalRotation: {x: -0.16805132, y: -0, z: -0, w: 0.98577833}
-  m_LocalPosition: {x: 0.16, y: -0.2, z: -0.23}
+  m_LocalPosition: {x: 0.16, y: -0.22, z: -0.22}
   m_LocalScale: {x: 6.1889114, y: 0.018251, z: 11.899463}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -978,16 +978,20 @@ PrefabInstance:
       value: PinBall
       objectReference: {fileID: 0}
     - target: {fileID: 1341056751160186723, guid: a30e06ee17ff441448a3d6ba48fdfa30, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 15.89864
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341056751160186723, guid: a30e06ee17ff441448a3d6ba48fdfa30, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.136
+      value: -4.92
       objectReference: {fileID: 0}
     - target: {fileID: 1341056751160186723, guid: a30e06ee17ff441448a3d6ba48fdfa30, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.885
+      value: -1.81
       objectReference: {fileID: 0}
     - target: {fileID: 1341056751160186723, guid: a30e06ee17ff441448a3d6ba48fdfa30, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30.183
+      value: 30.18
       objectReference: {fileID: 0}
     - target: {fileID: 4865064391339405807, guid: a30e06ee17ff441448a3d6ba48fdfa30, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1572,8 +1576,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.017743051, y: 0.012183792, z: 0.020000031}
-  m_Center: {x: -0.0011278944, y: 0.0026708352, z: -0.000000052533654}
+  m_Size: {x: 0.017743051, y: 0.011931637, z: 0.020000031}
+  m_Center: {x: -0.0011278989, y: 0.0027969126, z: -0.000000052618073}
 --- !u!65 &1391406429
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1593,8 +1597,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.03655887, y: 0.0058579477, z: 0.020000031}
-  m_Center: {x: 0.081671335, y: -0.024254272, z: -0.00000015741472}
+  m_Size: {x: 0.035538368, y: 0.0058579477, z: 0.020000031}
+  m_Center: {x: 0.08218187, y: -0.024254229, z: -0.00000016757535}
 --- !u!1 &1432067493 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5148817236446094103, guid: a30e06ee17ff441448a3d6ba48fdfa30, type: 3}
