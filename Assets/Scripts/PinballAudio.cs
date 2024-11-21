@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class PinballAudio : MonoBehaviour
 {
-    public AudioClip wallHitSound;   // Audio clip for wall hit
-    public AudioClip bumperHitSound; // Audio clip for bumper hit
-    public AudioClip flipperHitSound; // Audio clip for flipper hit
-    public AudioClip drainSound; // Audio clip for drain hit
+    public AudioClip wallHitSound;   
+    public AudioClip bumperHitSound; 
+    public AudioClip flipperHitSound; 
+    public AudioClip drainSound; 
 
-    private AudioSource audioSource; // Reference to AudioSource component
+    private AudioSource audioSource; 
 
     void Start()
     {
-        // Get the AudioSource component attached to the ball
+        
         audioSource = GetComponent<AudioSource>();
     }
 
