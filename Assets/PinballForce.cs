@@ -16,13 +16,12 @@ public class PinballForce : MonoBehaviour
     // Cached Rigidbody
     private Rigidbody ballRigidbody;
 
-    // Timer settings
-    private bool isLaunching = false;
+    // Launch availability
+    public bool canLaunch = true;
 
     void Start()
     {
         // Get the Rigidbody component attached to the GameObject
-        
         ballRigidbody = GetComponent<Rigidbody>();
 
         if (ballRigidbody == null)
@@ -33,22 +32,30 @@ public class PinballForce : MonoBehaviour
 
     void Update()
     {
-        // Check if the launch key is pressed
-        if (Input.GetKeyDown(launchKey) && ballRigidbody != null && !isLaunching)
+        // Check if the launch key is pressed and launching is allowed
+        if (Input.GetKeyDown(launchKey) && ballRigidbody != null && canLaunch)
         {
-            StartCoroutine(LaunchBallWithDelay());
+            LaunchBall();
         }
     }
 
-    IEnumerator LaunchBallWithDelay()
+    void LaunchBall()
     {
-        isLaunching = true;
-        Debug.Log("Launching in 1 second...");
-        yield return new WaitForSeconds(1f); // Wait for 1 second
-
         // Apply force in the specified direction
         ballRigidbody.AddForce(forceDirection.normalized * forceMagnitude, ForceMode.Impulse);
         Debug.Log("Ball launched with force: " + forceMagnitude);
-        isLaunching = false;
+
+        // Disable further launches until reset
+        canLaunch = false;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Reset launch capability when colliding with a "Fail" tagged object
+        if (collision.gameObject.CompareTag("Fail"))
+        {
+            canLaunch = true;
+            Debug.Log("Ball reset. Launch available again.");
+        }
     }
 }
